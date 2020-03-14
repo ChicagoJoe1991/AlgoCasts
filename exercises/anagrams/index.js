@@ -9,8 +9,6 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  let sA = stringA.replace(/[^\w]/g, "").toLowerCase();
-  let sB = stringB.replace(/[^\w]/g, "").toLowerCase();
   //   // Create two empty objects (one for each string).
   //   let sA = {};
   //   let sB = {};
@@ -28,7 +26,10 @@ function anagrams(stringA, stringB) {
   //     sB[char] === sA[char] ? (counter = 0) : (counter += 1);
   //   }
   //   return counter > 0 ? false : true;
-  console.log(sA.split("").sort());
+
+  let sA = stringA.replace(/[^\w]/g, "").toLowerCase();
+  let sB = stringB.replace(/[^\w]/g, "").toLowerCase();
+
   return (
     sA
       .split("")
